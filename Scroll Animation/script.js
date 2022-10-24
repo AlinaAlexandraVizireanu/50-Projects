@@ -6,11 +6,10 @@ checkBoxes();
 
 function checkBoxes() {
     const triggerBottom = window.innerHeight * 0.8;
-
+    console.log(triggerBottom);
     for (box of boxes) {
         const boxTop = box.getBoundingClientRect().top;
         console.log(boxTop);
-        console.log(triggerBottom);
         if (boxTop < triggerBottom) {
             box.classList.add('show');
         } else {
@@ -18,4 +17,3 @@ function checkBoxes() {
         }
     }
 }
-
