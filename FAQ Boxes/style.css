@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #f2e9e4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 625px;
+}
+
+.box {
+    width: 100%;
+    border: 1px solid #000;
+    margin: 5px;
+    padding: 30px 20px;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: #edede9;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.box h3 {
+    position: relative;
+    margin: 0;
+    width: 90%;
+    z-index: 1;
+}
+
+.box p {
+    position: relative;
+    margin-right: 0;
+    width: 90%;
+    z-index: 1;
+    display: none;
+}
+
+.extend{
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+.box.active {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box.active::before,
+.box.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #a2d2ff;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.box.active::before{
+    color: #cdb4db;
+    top: -10px;
+    left: 30px;
+    transform: rotateY(180deg);
+}
+
+.box.active p{
+    display: block;
+}
+
+.extend .fa-xmark{
+    display: none;
+}
+
+.box.active .extend .fa-xmark{
+    display: block;
+    color: #fff;
+}
+
+.box.active .extend .fa-chevron-down{
+    display: none;
+}
+
+.box.active .extend{
+    background-color: #9fa4a8;
+}
