@@ -34,7 +34,7 @@ body {
     background-color: #edede9;
     overflow: hidden;
     position: relative;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .box h3 {
@@ -52,7 +52,7 @@ body {
     display: none;
 }
 
-.extend{
+.extend {
     border: 0;
     background-color: inherit;
     cursor: pointer;
@@ -72,6 +72,7 @@ body {
 .box.active {
     background-color: #fff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
 .box.active::before,
@@ -88,30 +89,30 @@ body {
     cursor: pointer;
 }
 
-.box.active::before{
+.box.active::before {
     color: #cdb4db;
     top: -10px;
     left: 30px;
     transform: rotateY(180deg);
 }
 
-.box.active p{
+.box.active p {
     display: block;
 }
 
-.extend .fa-xmark{
+.extend .fa-xmark {
     display: none;
 }
 
-.box.active .extend .fa-xmark{
+.box.active .extend .fa-xmark {
     display: block;
     color: #fff;
 }
 
-.box.active .extend .fa-chevron-down{
+.box.active .extend .fa-chevron-down {
     display: none;
 }
 
-.box.active .extend{
+.box.active .extend {
     background-color: #9fa4a8;
 }
