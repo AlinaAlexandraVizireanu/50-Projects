@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1495d1;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    width: 40%;
+    background-color: #fff;
+    color: #4361ee;
+    border: 5px solid #4361ee;
+    overflow: hidden;
+    border-radius: 0 0 40px 40px;
+}
+
+.remained{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: 0.3s ease;
+}
+
+.remained h3{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.remained p{
+    margin-top: 0;
+}
+
+.percentage{
+    background-color: #21b4f8;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 0;
+    transition: 0.3s ease;
+}
+
+.secondary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #4361ee;
+}
+
+.glasses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60%;
+    height: 250px;
+}
+
+.secondary-container p {
+    color: #fff;
+}
+
+.glasses-container .glass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 4px solid #4361ee;
+    max-height: 110px;
+    max-width: 60px;
+    min-height: 80px;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.3s ease;
+    margin: 5px;
+}
+
+.glasses-container .glass.full{
+    background-color: #21b4f8;
+    color: #fff;
+}
